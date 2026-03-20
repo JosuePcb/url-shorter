@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+--color-principal:  #0D0F1C;  
+--color-secundario: #2C4A52;  
+--color-terciario:  #56a5ee;  
+--color-cuarto:     #363D35;  
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--color-principal);
+  font-family: "Roboto", sans-serif;
+  color: var(--color-secundario);
+}
+
+body.light-mode {
+  --color-principal: #F2F4FF;
+  --color-secundario: #93ACB5;
+  --color-terciario: #4384c9;
+  --color-cuarto: #6C756B;
+}
+
+
+.icon-sm {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  background: transparent;
+  border: 1px solid var(--color-terciario);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--color-secundario);
+  transition: background 0.3s, color 0.3s;
+  z-index: 999;
+}
+
+.theme-toggle:hover {
+  background: var(--color-terciario);
+  color: var(--color-principal);
+}
+
+
+/* ===== Main ===== */
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fade 0.8s ease-out forwards;
+    padding: 0 20px 40px;
+}
+
+@keyframes fade {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+#welcome-section {
+    text-align: center;
+    margin-bottom: 24px;
+    color: var(--color-terciario);
+    font-style: italic;
+    font-weight: bold;
+    text-shadow: 0.1px 1px px var(--color-secundario);
+}
+
+#welcome-section p {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.2;
+    text-align: center;
+    margin: 0;
+}
+
+
+input {
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    color: var(--color-principal);
+    font-weight: bold;
+    background-color: var(--color-secundario);
+    border-radius: 999px;
+    border: 0;
+    padding: 14px 24px;
+    width: 25rem;
+    max-width: 90%;
+    font-size: 1rem;
+    display: block;
+    margin: 0 auto;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--color-terciario);
+}
+
+/* ===== Generate Button ===== */
+
+.generate-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 14px 32px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--color-terciario);
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+    cursor: pointer;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.generate-btn:hover {
+    transform: scale(1.03);
+}
+
+
+
+/* ===== Footer ===== */
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    color: var(--color-secundario);
+    opacity: 0.5;
+    font-size: 0.8rem;
+}

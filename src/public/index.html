@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL shorter</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <main id="main">
+        <div id="welcome-section"df>
+            <p id="url">URL</p>
+            <p id="shorter">Shorter</p>
+        </div>
+
+        <input type="text" id="request" placeholder="Inserta el enlace" maxlength="2048">
+
+        <button id="generateBtn" class="generate-btn">Acortar URL</button>
+
+        <!-- Botón de tema -->
+        <button id="themeToggle" class="theme-toggle">
+            <i data-lucide="sun"></i>
+        </button>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; Designed by Josue Hernandez</p>
+    </footer>
+
+    <script src="index.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+
+</html>
