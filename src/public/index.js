@@ -1,4 +1,4 @@
-const API_URL = "http://127.0.0.1:8000";
+const API_URL = "https://url-shorter-99x1.onrender.com";
 
 // ===== Tema =====
 const themeToggle = document.getElementById("themeToggle");
