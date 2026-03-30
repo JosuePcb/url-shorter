@@ -145,6 +145,53 @@ input:focus {
 
 
 
+/* ===== Result ===== */
+
+.result-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 25rem;
+    max-width: 90%;
+    margin: 0 auto;
+    animation: fade 0.4s ease-out forwards;
+}
+
+.result-input {
+    flex: 1;
+    font-size: 0.9rem;
+    color: var(--color-terciario) !important;
+    background-color: rgba(86, 165, 238, 0.1) !important;
+    border: 1.5px solid var(--color-terciario) !important;
+    cursor: text;
+}
+
+.copy-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    border: 1.5px solid var(--color-terciario);
+    background: transparent;
+    color: var(--color-terciario);
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+    flex-shrink: 0;
+}
+
+.copy-btn:hover {
+    background: var(--color-terciario);
+    color: white;
+    transform: scale(1.05);
+}
+
+.copy-btn i, .copy-btn svg {
+    width: 18px;
+    height: 18px;
+}
+
 /* ===== Footer ===== */
 
 .footer {

@@ -5,6 +5,6 @@ I just wanted to use hashing in a project and rack my brain figuring out how to 
 ## Stack
 
 - **Backend** — FastAPI (Python)
-- **Database** — Redis (want to learn it)
+- **Database** — MongoDB (Async Pymongo)
 - **Frontend** — Vanilla HTML, CSS & JavaScript
 
