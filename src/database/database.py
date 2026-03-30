@@ -13,7 +13,7 @@ DB_NAME = os.getenv("DB_NAME")
 COLLECTION_NAME = os.getenv("COLLECTION_NAME")
 
 # Crear el cliente asíncrono de MongoDB
-client = AsyncMongoClient(URI, server_api=ServerApi('1'))
+client = AsyncMongoClient(URI)
 
 # Acceder a la base de datos y colección
 db = client[DB_NAME]
