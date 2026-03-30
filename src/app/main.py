@@ -12,13 +12,13 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["url-shorter-99x1.onrender.com"],
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-BASE_URL = "url-shorter-99x1.onrender.com"
+BASE_URL = "http://0.0.0.0:10000"
 
 
 class ShortenRequest(BaseModel):
