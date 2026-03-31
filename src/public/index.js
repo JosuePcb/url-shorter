@@ -1,4 +1,4 @@
-const API_URL = "http://0.0.0.0:10000";
+const API_URL = "http://127.0.0.1:8000";
 
 // ===== Tema =====
 const themeToggle = document.getElementById("themeToggle");

@@ -1,6 +1,7 @@
 from dotenv import load_dotenv
 from pymongo import AsyncMongoClient
 from pymongo.server_api import ServerApi
+import certifi
 import os
 import string
 import random
@@ -12,8 +13,8 @@ URI = os.getenv("MONGODB_URI")
 DB_NAME = os.getenv("DB_NAME")
 COLLECTION_NAME = os.getenv("COLLECTION_NAME")
 
-# Crear el cliente asíncrono de MongoDB
-client = AsyncMongoClient(URI)
+# Crear el cliente asíncrono de MongoDB con certificados raíz
+client = AsyncMongoClient(URI, server_api=ServerApi('1'), tlsCAFile=certifi.where())
 
 # Acceder a la base de datos y colección
 db = client[DB_NAME]

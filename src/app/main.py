@@ -18,7 +18,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-BASE_URL = "http://0.0.0.0:10000"
+BASE_URL = "http://127.0.0.1:8000"
 
 
 class ShortenRequest(BaseModel):
@@ -32,10 +32,6 @@ async def shorten_url(request: ShortenRequest):
         return {"short_url": f"{BASE_URL}/{short_id}"}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
-
-
-# Servir archivos estáticos (CSS, JS, etc.) bajo /static
-app.mount("/static", StaticFiles(directory="src/public"), name="static")
 
 
 @app.get("/")
@@ -53,3 +49,6 @@ async def redirect_url(short_id: str):
     if not original_url:
         raise HTTPException(status_code=404, detail="URL no encontrada")
     return RedirectResponse(url=original_url)
+
+
+app.mount("/static", StaticFiles(directory="src/public"), name="static")
